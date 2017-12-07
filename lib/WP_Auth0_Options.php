@@ -90,7 +90,7 @@ class WP_Auth0_Options extends WP_Auth0_Options_Generic {
 			'passwordless_method' => 'magiclink',
 			'passwordless_cdn_url' => '//cdn.auth0.com/js/lock-passwordless-2.2.min.js',
 			'use_lock_10' => true,
-			'cdn_url' => '//cdn.auth0.com/js/lock/11.0.0-beta.7/lock.min.js',
+			'cdn_url' => '//cdn.auth0.com/js/lock/11.0.0-beta.8/lock.min.js',
 			'cdn_url_legacy' => '//cdn.auth0.com/js/lock-9.2.min.js',
 			'requires_verified_email' => true,
 			'wordpress_login_enabled' => true,
