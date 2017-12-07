@@ -123,6 +123,8 @@ class WP_Auth0_DBManager {
 		$options->set('use_lock_10', true);
 		$options->set('cdn_url', '//cdn.auth0.com/js/lock/11.0.0-beta.8/lock.min.js');
 		$options->set('auth0js-cdn', '//cdn.auth0.com/js/auth0/9.0.0-beta.8/auth0.min.js');
+		$options->set('client_signing_algorithm', 'RS256');
+		$options->set('cache_expiration', 1440);
 
 		// Update Client
 		$app_token = $options->get( 'auth0_app_token' );

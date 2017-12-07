@@ -227,6 +227,10 @@ class WP_Auth0_Api_Client {
 						"allowed_origins"=>array(
 							home_url( '/wp-login.php' )
 						),
+						"jwt_configuration" => array(
+							"alg" => "RS256"
+						),
+						"app_type" => "regular_web",
 						"cross_origin_auth" => true,
 						"cross_origin_loc" => home_url('/index.php?auth0fallback=1','https'),
 						"allowed_logout_urls" => array(

@@ -77,7 +77,7 @@ class WP_Auth0_Options extends WP_Auth0_Options_Generic {
 			'auto_login_method' => '',
 			'client_id' => '',
 			'client_secret' => '',
-			'client_signing_algorithm' => 'HS256',
+			'client_signing_algorithm' => 'RS256',
 			'cache_expiration' => 1440,
 			'client_secret_b64_encoded' => null,
 			'domain' => '',
