@@ -107,7 +107,6 @@ class WP_Auth0_InitialSetup_Consent {
 
 			$this->a0_options->set( 'client_id', $client_response->client_id );
 			$this->a0_options->set( 'client_secret', $client_response->client_secret );
-			$this->a0_options->set( 'client_signing_algorithm', 'RS256' );
 
 			$client_id = $client_response->client_id;
 		}
