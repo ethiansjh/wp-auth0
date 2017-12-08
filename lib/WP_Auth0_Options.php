@@ -143,7 +143,7 @@ class WP_Auth0_Options extends WP_Auth0_Options_Generic {
 			'default_login_redirection' => home_url(),
 
       		'auth0_server_domain' => 'auth0.auth0.com',
-			'auth0js-cdn' => '//cdn.auth0.com/js/auth0/9.0.0-beta.8/auth0.min.js',
+			'auth0js-cdn' => '//cdn.auth0.com/js/auth0/9.0.0-beta.9/auth0.min.js',
 
 			//DASHBOARD
 			'chart_idp_type' => 'donut',
