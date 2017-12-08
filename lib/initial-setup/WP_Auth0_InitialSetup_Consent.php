@@ -107,6 +107,7 @@ class WP_Auth0_InitialSetup_Consent {
 
 			$this->a0_options->set( 'client_id', $client_response->client_id );
 			$this->a0_options->set( 'client_secret', $client_response->client_secret );
+			$this->a0_options->set( 'client_signing_algorithm', 'RS256' );
 
 			$client_id = $client_response->client_id;
 		}
@@ -143,8 +144,9 @@ class WP_Auth0_InitialSetup_Consent {
 			if ( $connection_exists === false ) {
 
 				$secret = $this->a0_options->get_client_secret_as_key();
+				$alg = $this->a0_options->get_client_signing_algorithm();
 				$token_id = uniqid();
-				$migration_token = JWT::encode( array( 'scope' => 'migration_ws', 'jti' => $token_id ), $secret );
+				$migration_token = JWT::encode( array( 'scope' => 'migration_ws', 'jti' => $token_id ), $secret, $alg );
 				$migration_token_id = $token_id;
 
 				$operations = new WP_Auth0_Api_Operations( $this->a0_options );

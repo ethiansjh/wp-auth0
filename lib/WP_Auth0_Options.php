@@ -65,7 +65,7 @@ class WP_Auth0_Options extends WP_Auth0_Options_Generic {
 	}
 
 	public function get_client_signing_algorithm() {
-			$client_signing_algorithm = $this->get('client_signing_algorithm', 'HS256');
+			$client_signing_algorithm = $this->get('client_signing_algorithm');
 			return $client_signing_algorithm;
 	}
 	protected function defaults() {
@@ -77,7 +77,7 @@ class WP_Auth0_Options extends WP_Auth0_Options_Generic {
 			'auto_login_method' => '',
 			'client_id' => '',
 			'client_secret' => '',
-			'client_signing_algorithm' => 'RS256',
+			'client_signing_algorithm' => null,
 			'cache_expiration' => 1440,
 			'client_secret_b64_encoded' => null,
 			'domain' => '',
